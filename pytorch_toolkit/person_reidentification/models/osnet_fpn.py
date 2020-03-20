@@ -86,7 +86,7 @@ class OSNetFPN(OSNet):
 
         if fpn:
             fpn_out_dim = fpn_dim if fpn_process in ['max_pooling', 'elementwise_sum'] else int(fpn_dim * len(self.fpn.dims_out))
-            self.fc = self._construct_fc_layer(feature_dim, fpn_out_dim, dropout_p=dropout_prob)
+            self.fc = self._construct_fc_layer(feature_dim, feature_dim, dropout_p=dropout_prob)
         else:
             self.fc = self._construct_fc_layer(feature_dim, channels[3], dropout_p=None)
 
