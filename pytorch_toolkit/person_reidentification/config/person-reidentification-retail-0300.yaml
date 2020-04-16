@@ -9,7 +9,7 @@ model:
 
 data:
   type: 'image'
-  sources: ['msmt17']
+  sources: ['msmt17', 'int-airport', 'int-camera-tampering', 'int-globalme', 'int-mall', 'int-psv-indoor', 'int-psv-outdoor', 'int-ss-platform', 'int-ss-street', 'int-ss-ticket', 'int-wildtrack']
   targets: ['market1501']
   height: 256
   width: 128
@@ -43,7 +43,7 @@ data:
     random_grid:
       enable: False
       p: 0.15
-  save_dir: 'outputs/reid-0300'
+  save_dir: 'outputs/reid-0300-int'
 
 sampler:
   train_sampler: 'RandomIdentitySamplerV2'

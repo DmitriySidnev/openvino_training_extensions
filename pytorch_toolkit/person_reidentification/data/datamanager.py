@@ -24,11 +24,22 @@ from torchreid.data.datamanager import DataManager
 from torchreid.data.datasets import __image_datasets
 
 from .datasets.globalme import GlobalMe
+from .datasets.internal import *
 from .transforms import build_transforms
 from .sampler import build_train_sampler
 
 
 __image_datasets['globalme'] = GlobalMe
+__image_datasets['int-airport'] = InternalAirport
+__image_datasets['int-camera-tampering'] = InternalCameraTampering
+__image_datasets['int-globalme'] = InternalGlobalMe
+__image_datasets['int-mall'] = InternalMall
+__image_datasets['int-psv-indoor'] = InternalPSVIndoor
+__image_datasets['int-psv-outdoor'] = InternalPSVOutdoor
+__image_datasets['int-ss-platform'] = InternalSSPlatform
+__image_datasets['int-ss-street'] = InternalSSStreet
+__image_datasets['int-ss-ticket'] = InternalSSTicket
+__image_datasets['int-wildtrack'] = InternalWildtrack
 
 
 def init_image_dataset(name, **kwargs):
